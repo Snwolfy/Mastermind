@@ -1,2 +1,2 @@
-# Mastermind
-First solo school project with javascript
+**# Mastermind**
+School project with javascript
