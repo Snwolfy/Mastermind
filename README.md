@@ -1,2 +1,2 @@
-**# Mastermind**
+# Mastermind
 School project with javascript
