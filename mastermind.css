@@ -9,6 +9,7 @@ html, body {
     overflow: hidden;
 }
 
+/* Titre */
 h1 {
     display:flex;
     justify-content: center;
@@ -18,6 +19,7 @@ h1 {
     color: #246394;
 }
 
+/* Les 3 zones */
 section {
     display: grid;
     grid-template-rows: 550px;
@@ -25,7 +27,7 @@ section {
     justify-content: center;
 }
 
-
+/* Zone joueur */
 #choices {
     display: grid;
     grid-template: 1fr 1fr / repeat(5,1fr);
@@ -45,6 +47,7 @@ section {
     grid-template-rows: 170px 170px;
 }
 
+/* Les couleurs */
 #couleur1 {
     width: 40px;
     height: 40px;
@@ -80,7 +83,7 @@ section {
     background: #F46688;
 }
 
-
+/* Les choix du joueur */
 #choice1 {
     width: 40px;
     height: 40px;
@@ -105,6 +108,7 @@ section {
     border-radius: 50%;
     background: white;
 }
+/* Les boutons */
 #button {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -124,12 +128,12 @@ section {
 }
 
 
-   
+/* Taille des icônes */
 i {
     font-size: 40px;
    
 }
-
+/* Les réponses du joueur */
 #reponses {
     padding: 10px;
     margin: 10px;
@@ -141,7 +145,7 @@ i {
     gap: 1px;
 
 }
-
+/* Les aides pour le joueur */
 #tips {
     padding: 5px;
     margin: 10px;
@@ -155,7 +159,7 @@ i {
     
 
 }
-
+/* Jusqu'à 10 tentatives sont possibles */
 #reponse1 { 
     display: flex;
     flex-direction: row;
