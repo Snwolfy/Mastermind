@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+html, body {
+    display: grid;
+    grid-template: 80px 1fr / 1fr ;
+    background-color: #B9D9EB;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+h1 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    font-size: 40px;
+    color: #246394;
+}
+
+section {
+    display: grid;
+    grid-template-rows: 550px;
+    grid-template-columns: repeat(3, 350px);
+    justify-content: center;
+}
+
+
+#choices {
+    display: grid;
+    grid-template: 1fr 1fr / repeat(5,1fr);
+    margin: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    grid-gap: 10px;
+    background-color: #90C2E0;
+    border-radius: 10px;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+#player {
+    display: grid;
+    grid-template-rows: 170px 170px;
+}
+
+#couleur1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: red;
+}
+
+#couleur2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: blue;
+}
+
+#couleur3 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: green;
+}
+
+#couleur4 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: yellow;
+}
+
+#couleur5 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #F46688;
+}
+
+
+#choice1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+}
+#choice2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+}
+#choice3 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+}
+#choice4 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+}
+#button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid black;
+    border-radius: 10px;
+    justify-items: center;
+    align-items: center;
+    background-color: #90C2E0;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+}
+
+#envoyer {
+    
+   font-size: 40px;
+}
+
+
+   
+i {
+    font-size: 40px;
+   
+}
+
+#reponses {
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    border: 2px solid black;
+    border-radius: 10px;
+    grid-template-rows: repeat(10,50px);
+    background-color: #90C2E0;
+    gap: 1px;
+
+}
+
+#tips {
+    padding: 5px;
+    margin: 10px;
+    display: grid;
+    grid-template-rows: repeat(10,50px);
+    gap: 1px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #90C2E0;
+    justify-content: center;
+    
+
+}
+
+#reponse1 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#reponse2 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#reponse3 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#reponse4 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#reponse5 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#reponse6 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#reponse7 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#reponse8 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#reponse9 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#reponse10 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
