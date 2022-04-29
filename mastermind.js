@@ -1,5 +1,6 @@
+// Les couleurs possibles pour le jeu
 const couleurs = ["red","blue","green","yellow","pink"]
-
+// Les choix de l'ordinateur
 function ordiResult() {
     const sequence = [];
     for (let i = 0; i < 4; i++) {
@@ -9,9 +10,11 @@ function ordiResult() {
     }
     return sequence;
 }
+// Séquence de l'ordinateur
 const ordiSequence = ordiResult();
 console.log(ordiSequence);
 
+// Permet de cliquer sur les couleurs afin de l'ajouter
 const rouge = document.querySelector("#couleur1");
 rouge.onclick = choix;
 rouge.onmouseover = red;
@@ -37,24 +40,31 @@ rose.onclick = choix;
 rose.onmouseover = pink;
 rose.onmouseout = pinkOut;
 
+// Envoie les choix  du joueur
 const envoyer = document.querySelector("#envoyer")
 envoyer.onclick = envoie;
 envoyer.onmouseover = envoieOver;
 envoyer.onmouseout = envoieOut;
 
+// Taille lorsque on passe la souris dessus
 function envoieOver () {
     envoyer.style.fontSize = "50px";
 }
 function envoieOut () {
     envoyer.style.fontSize = "40px";
 }
+
+// Tentative possible, 10 maximum
 let compteur = 1;
 
+// Permet de comparer les réponses du joueur au séquence de l'ordinateur
 function envoie(){
     let ordiSequence2 = ordiSequence.slice();
+    // Tips de couleur bien placé
     let couleurVrai = 0;
     console.log(ordiSequence);
     j = 0;
+    // Compare les positions des couleurs dans une liste
     while ( j < reponse.length) {
         if ( reponse[j] == ordiSequence2[j]) {
             couleurVrai++;
@@ -66,8 +76,7 @@ function envoie(){
         }
         
     }
-    console.log("joueur " +  reponse);
-    console.log("ordi " + ordiSequence2);
+    // Tips de couleur mal placé
     let couleurFausse = 0;
     k = 0;
     while ( k < reponse.length) {
@@ -98,45 +107,13 @@ function envoie(){
         supprimer();
         compteur++;
     }
+    // Si les 4 couleurs choisies par le joueur correspondent aux couleurs choisies par l'ordinateur
     if ( couleurVrai == 4) {
         alert("Vous avez gagné ! Félicitation !");
     }
 }
-function traitement() {
-    console.log(ordiSequence);
-    console.log(reponse);
-    let ordiSequence2 = ordiSequence;
-    let couleurVrai = 0;
-    j = 0;
-    while ( j < reponse.length) {
-        if ( reponse[j] == ordiSequence[j]) {
-            couleurVrai++;
-            reponse.splice(j,1);
-            ordiSequence2.splice(j,1);
-        }
-        else {
-            j++;
-        }
-        
-    }
-    console.log("joueur " +  reponse);
-    console.log("ordi " + ordiSequence2);
-    let couleurFausse = 0;
-    k = 0;
-    while ( k < reponse.length) {
-        const positionCouleur = ordiSequence.indexOf(reponse[k]);
-        if ( positionCouleur > -1) {
-            couleurFausse++;
-            reponse.splice(k,1);
-            ordiSequence2.splice(positionCouleur,1);
-        }
-        else {
-            k++
-        }
 
-    }
-}
-
+// Les choix des couleurs du joueur
 var rep1 = document.querySelector("#choice1");
 
 var rep2 = document.querySelector("#choice2");
@@ -145,16 +122,28 @@ var rep3 = document.querySelector("#choice3");
 
 var rep4 = document.querySelector("#choice4");
 
+// Supprimer les couleurs choisies
 const supprime = document.querySelector("#delete");
 supprime.onclick = supprimer;
 supprime.onmouseover = supprimeOver;
 supprime.onmouseout = supprimeOut;
-
+function supprimer (){
+    i = 0;
+    reponse = [];
+    rep1.style.backgroundColor = "white";
+    rep2.style.backgroundColor = "white";
+    rep3.style.backgroundColor = "white";
+    rep4.style.backgroundColor = "white";
+}
+// Recommencer une nouvelle partie
 const recharger = document.querySelector("#refresh");
 recharger.onclick = refresh;
 recharger.onmouseover = rechargeOver;
 recharger.onmouseout = rechargeOut;
-
+function refresh() {
+    window.location.reload()
+}
+// Taille des icônes
 function supprimeOver () {
     supprime.style.fontSize = "50px";
 }
@@ -169,20 +158,11 @@ function rechargeOut () {
     recharger.style.fontSize = "40px";
 }
 
-function refresh() {
-    window.location.reload()
-}
-function supprimer (){
-    i = 0;
-    reponse = [];
-    rep1.style.backgroundColor = "white";
-    rep2.style.backgroundColor = "white";
-    rep3.style.backgroundColor = "white";
-    rep4.style.backgroundColor = "white";
-}
 
+// Permet de savoir sur quel couleur se trouve la souris
 let type;
 
+// Rouge
 function red () {
     type = "red";
     rouge.style.width = "50px" ;
@@ -194,6 +174,7 @@ function redOut () {
     rouge.style.height = "40px";
     rouge.style.borderRadius = "50%";
 }
+// Bleue
 function blue () {
     type = "blue";
     bleue.style.width = "50px" ;
@@ -205,6 +186,7 @@ function blueOut() {
     bleue.style.height = "40px";
     bleue.style.borderRadius = "50%";
 }
+// Vert
 function green () {
     type = "green";
     vert.style.width = "50px" ;
@@ -216,6 +198,7 @@ function greenOut () {
     vert.style.height = "40px";
     vert.style.borderRadius = "50%";
 }
+// Jaune
 function yellow () {
     type = "yellow";
     jaune.style.width = "50px" ;
@@ -227,6 +210,7 @@ function yellowOut() {
     jaune.style.height = "40px";
     jaune.style.borderRadius = "50%";
 }
+// Rose
 function pink () {
     type = "pink";
     rose.style.width = "50px" ;
@@ -238,11 +222,12 @@ function pinkOut() {
     rose.style.height = "40px";
     rose.style.borderRadius = "50%";
 }
-
+// Les réponses du joueur
 var reponse = [];
 let i = 0;
-
+// Ajoute la couleur choisit par le joueur dans la liste
 function choix () {
+    // 1er choix
     if ( i == 0) {
         if (type == "red") {
         rep1.style.backgroundColor = "red"
@@ -269,6 +254,7 @@ function choix () {
         }
         i++;
     }
+    // 2ème choix
     else if ( i == 1) {
         if (type == "red") {
         rep2.style.backgroundColor = "red"
@@ -297,6 +283,7 @@ function choix () {
         }
         i++;
     }
+    // 3ème choix
     else if ( i == 2) {
         if (type == "red") {
         rep3.style.backgroundColor = "red"
@@ -325,6 +312,7 @@ function choix () {
         }
         i++;
     }
+    // 4ème choix
     else if ( i == 3) {
         if (type == "red") { 
             rep4.style.backgroundColor = "red"
