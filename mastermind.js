@@ -58,6 +58,7 @@ function envoieOut () {
 let compteur = 1;
 
 // Permet de comparer les réponses du joueur au séquence de l'ordinateur
+let victoire = false;
 function envoie(){
     let ordiSequence2 = ordiSequence.slice();
     // Tips de couleur bien placé
@@ -91,7 +92,7 @@ function envoie(){
         }
 
     }
-    if ( compteur < 11 && i == 4) {
+    if ( compteur < 11 && i == 4 && victoire != true) {
         console.log("Réponses joueur : " + reponse);
         const create = document.querySelector("#reponses");
         const result1 =  "style='width: 40px; height: 40px ; border-radius: 50% ; background-color:" + rep1.style.backgroundColor +";'";
@@ -110,6 +111,7 @@ function envoie(){
     // Si les 4 couleurs choisies par le joueur correspondent aux couleurs choisies par l'ordinateur
     if ( couleurVrai == 4) {
         alert("Vous avez gagné ! Félicitation !");
+        victoire = true;
     }
 }
 
