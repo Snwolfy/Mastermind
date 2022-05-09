@@ -1,5 +1,5 @@
 # Mastermind
-![image](file:///Users/loicjin/Desktop/FRONT/Mastermind/Capture%20d%E2%80%99e%CC%81cran%202022-05-09%20a%CC%80%2008.51.45.png)
+![image](///Users/loicjin/Desktop/FRONT/Mastermind/Capture%20d%E2%80%99e%CC%81cran%202022-05-09%20a%CC%80%2008.51.45.png)
 
 Voici le premier projet solo en JS.
 
